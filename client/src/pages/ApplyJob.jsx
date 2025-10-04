@@ -34,7 +34,7 @@ const ApplyJob = () => {
   // Fetch job details
   const fetchJob = async () => {
     try {
-      const { data } = await axios.get(`${backendUrl}/api/jobs/${id}`);
+      const { data } = await axios.get(`${backendUrl}api/jobs/${id}`);
       if (data.success) {
         setJobData(data.job);
         findSimilarJobs(data.job);

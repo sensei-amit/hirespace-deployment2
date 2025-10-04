@@ -33,7 +33,7 @@ export const AppContextProvider = (props) => {
     const fetchJobs = async () => {
       try {
         
-        const {data} = await axios.get(backendUrl + '/api/jobs')
+        const {data} = await axios.get(backendUrl + 'api/jobs')
 
         if(data.success){
           setJobs(data.jobs)
@@ -53,7 +53,7 @@ export const AppContextProvider = (props) => {
     // Function to fetch Compnay Data
 const fetchCompanyData = async () => {
     try {
-        const response = await axios.get(backendUrl + '/api/company/company',{headers: {token: companyToken}});
+        const response = await axios.get(backendUrl + 'api/company/company',{headers: {token: companyToken}});
         const data = response.data;
         console.log(data); // Move the console.log statement here
 
